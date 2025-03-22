@@ -1,3 +1,18 @@
+/**
+ * @typedef {"full-sun" | "partial-sun" | "shade"} Sunlight
+ * @typedef {"easy" | "moderate" | "hard"} CareLevel
+ * @typedef {"yes" | "no"} PetFriendly
+ */
+
+/**
+ * @typedef {Object} Plant
+ * @property {string} name
+ * @property {Sunlight} sunlight
+ * @property {CareLevel} careLevel
+ * @property {PetFriendly} petFriendly
+ */
+
+/** @type {Plant[]} */
 const plants = [
     {
         name: 'Spider Plant',
@@ -88,8 +103,11 @@ const plants = [
 ];
 
 function getPlantRecommendation() {
+    /** @type {Sunlight} */
     const sunlight = document.getElementById("sunlight").value;
+    /** @type {CareLevel} */
     const careLevel = document.getElementById("care-level").value;
+    /** @type {PetFriendly} */
     const petFriendly = document.getElementById("pet-friendly").value;
 
     const recommendedPlant = plants.find(plant =>

@@ -1,1 +1,1 @@
-document.getElementById("year").innerText = new Date().getFullYear();
+document.getElementById("year").innerText = String(new Date().getFullYear());

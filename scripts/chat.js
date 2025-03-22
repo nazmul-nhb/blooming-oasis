@@ -1,8 +1,12 @@
-
+/** @type {HTMLButtonElement} */
 const chatButton = document.getElementById("chat-button");
+/** @type {HTMLElement} */
 const chatBox = document.getElementById("chat-box");
+/** @type {HTMLButtonElement} */
 const sendButton = document.getElementById("send-message");
+/** @type {HTMLElement} */
 const chatMessages = document.getElementById("chat-messages");
+/** @type {HTMLInputElement} */
 const chatInput = document.getElementById("chat-input");
 
 chatButton.addEventListener("click", function () {
@@ -11,6 +15,7 @@ chatButton.addEventListener("click", function () {
 
 sendButton.addEventListener("click", function () {
     const message = chatInput.value;
+
     if (message.trim()) {
         // Add user's message to chat
         const userMessage = document.createElement("div");
