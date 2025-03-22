@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monstera Plant - Blooming Oasis</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/products.css">
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center">
+        <!-- Navbar Section -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Blooming Oasis</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="product.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Section -->
+    <div class="container mt-5">
+        <div class="product-header">
+            <h2>Monstera Plant - Your New Green Companion</h2>
+            <p>Everything you need to know about caring for your Monstera. From light needs to repotting tips.</p>
+        </div>
+
+        <!-- Video Section (Growth Stages and Care Routine) -->
+        <div class="video-container">
+            <h3>Watch: Monstera Growth Stages and Care Routine</h3>
+            <iframe class="" width="840" height="480" src="https://www.youtube.com/embed/1y7ZfjHSAfA"
+                title="Monstera From Seed 1 Year Update (Plus Potting Experiment)" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Product Details Section -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="../assets/mon.jpg" class="img-fluid custom-aspect" alt="Monstera Plant">
+            </div>
+            <div class="col-md-6">
+                <h3>Plant Details</h3>
+                <ul>
+                    <li><strong>Size:</strong> 12 inches (medium) / 24 inches (large)</li>
+                    <li><strong>Light Requirements:</strong> Bright, indirect light</li>
+                    <li><strong>Watering Requirements:</strong> Water when the top 1-2 inches of soil are dry</li>
+                    <li><strong>Toxicity:</strong> Mildly toxic to pets (cats & dogs) - keep out of reach of pets</li>
+                    <li><strong>Repotting Recommendations:</strong> Repot every 1-2 years as it grows</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Plant Options Section -->
+        <div class="plant-options">
+            <h4>Choose Your Plant Size and Add-Ons</h4>
+            <form id="cart-form">
+                <div class="mb-3">
+                    <label for="plant-size" class="form-label">Select Plant Size</label>
+                    <select id="plant-size" class="form-select">
+                        <option value="12">Medium - 12 inches</option>
+                        <option value="24">Large - 24 inches</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="pot-stand" class="form-label">Add Pot & Stand</label>
+                    <select id="pot-stand" class="form-select">
+                        <option value="none">No Pot/Stand</option>
+                        <option value="pot">Pot only</option>
+                        <option value="stand">Stand only</option>
+                        <option value="both">Pot & Stand</option>
+                    </select>
+                </div>
+                <div class="add-to-cart-btn">
+                    <button type="submit" class="btn btn-success btn-lg">Add to Cart</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast-container" class="toast-container position-fixed top-0 end-0 p-3">
+            <div id="success-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">Blooming Oasis</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Added to cart!
+                </div>
+            </div>
+        </div>
+
+        <!-- Plant Parent Tips Section -->
+        <div class="plant-parent-tips">
+            <h3>Plant Parent Tips: Share Your Experience!</h3>
+            <p>Have some Monstera care tips, or want to show off your plant? Share your experiences with fellow plant
+                lovers!</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="tip-card">
+                        <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="Plant Parent 1">
+                        <h5>Emma's Monstera Care Tips</h5>
+                        <p>"I've found that my Monstera thrives in the brightest spot in my apartment. It loves the
+                            morning sun!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tip-card">
+                        <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Plant Parent 2">
+                        <h5>John's Repotting Experience</h5>
+                        <p>"Repot your Monstera once every year to help it grow stronger. I use a mix of peat and
+                            perlite." </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tip-card">
+                        <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Plant Parent 3">
+                        <h5>Rachel's Growth Tips</h5>
+                        <p>"Be patient! It took a few months for mine to start climbing, but now it’s spreading
+                            beautifully!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; <span id="year"></span> Blooming Oasis</p>
+    </footer>
+    <script src="/scripts/common.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="/scripts/bootstrap.min.js"></script>
+
+    <script>
+        const form = document.getElementById('cart-form');
+        const toastContainer = document.getElementById('toast-container');
+        const successToast = new bootstrap.Toast(document.getElementById('success-toast'));
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            successToast.show();
+
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>

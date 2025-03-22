@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Blooming Oasis</title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/chat.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center">
+        <!-- Navbar Section -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Blooming Oasis</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <div class="container mt-5">
+        <!-- Live Chat Button -->
+        <button id="chat-button" class="btn btn-success">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+
+        <!-- Live Chat Box -->
+        <div id="chat-box" class="chat-box">
+            <div class="chat-header">Plant Specialist Chat</div>
+            <div class="chat-body">
+                <div id="chat-messages"></div>
+            </div>
+            <div class="chat-footer">
+                <input id="chat-input" type="text" placeholder="Type your message...">
+                <button id="send-message">Send</button>
+            </div>
+        </div>
+
+        <!-- General Inquiry Form -->
+        <div class="container mt-5">
+            <h1>Contact Us</h1>
+            <p>If you need plant care advice or have any general inquiries, feel free to reach out to us. We're here to
+                help!</p>
+
+            <!-- General Inquiry Form -->
+            <section id="contact-form" class="mt-5">
+                <h2>General Inquiries</h2>
+                <form id="inquiry-form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </section>
+        </div>
+
+
+        <!-- Toast Notification -->
+        <div id="toast-container" class="toast-container position-fixed top-0 end-0 p-3">
+            <div id="success-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">Blooming Oasis</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Your message has been sent successfully!
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Links Section -->
+        <section id="social-media" class="mt-5">
+            <h2>Connect with Us</h2>
+            <p>Follow us on social media for plant care tips, behind-the-scenes glimpses, and more!</p>
+            <div class="social-media">
+                <a href="https://facebook.com/nsda" target="_blank" class="fab fa-facebook-f"></a>
+                <a href="https://twitter.com/nsda" target="_blank" class="fab fa-twitter"></a>
+                <a href="https://instagram.com/nsda" target="_blank" class="fab fa-instagram"></a>
+                <a href="https://pinterest.com/nsda" target="_blank" class="fab fa-pinterest"></a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; <span id="year"></span> Blooming Oasis</p>
+    </footer>
+
+    <script src="/scripts/common.js"></script>
+    <script src="/scripts/chat.js"></script>
+
+    <!-- Bootstrap JS and Font Awesome -->
+    <script src="/scripts/bootstrap.min.js"></script>
+    <script src="/scripts/font-awesome.js"></script>
+
+    <script>
+        const form = document.getElementById('inquiry-form');
+        const toastContainer = document.getElementById('toast-container');
+        const successToast = new bootstrap.Toast(document.getElementById('success-toast'));
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            successToast.show();
+
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>

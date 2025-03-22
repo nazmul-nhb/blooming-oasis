@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blooming Oasis</title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center">
+        <!-- Navbar Section -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Blooming Oasis</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/product.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Plant Matchmaker Quiz -->
+    <section id="quiz" class="container my-5">
+        <h2 class="text-center mb-4">Find Your Perfect Plant</h2>
+        <form id="quiz-form">
+            <div class="mb-3">
+                <label for="sunlight" class="form-label">Preferred Sunlight</label>
+                <select id="sunlight" class="form-select">
+                    <option value="full-sun">Full Sun</option>
+                    <option value="partial-sun">Partial Sun</option>
+                    <option value="shade">Shade</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="care-level" class="form-label">Care Level</label>
+                <select id="care-level" class="form-select">
+                    <option value="easy">Easy</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="pet-friendly" class="form-label">Pet-Friendly</label>
+                <select id="pet-friendly" class="form-select">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="getPlantRecommendation()">Get Recommendation</button>
+        </form>
+        <div id="recommendation" class="mt-4"></div>
+    </section>
+
+    <!-- Vibrant Plant Collage -->
+    <section id="collage" class="container my-5">
+        <h2 class="text-center mb-4">Vibrant Plants</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="assets/vibrant/v1.jpeg" class="card-img-top" alt="Plant 1">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="assets/vibrant/v2.webp" class="card-img-top" alt="Plant 2">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="assets/vibrant/v3.jpg" class="card-img-top" alt="Plant 3">
+                </div>
+            </div>
+            <!-- Add more plant images here -->
+        </div>
+    </section>
+
+    <!-- Popular Houseplants -->
+    <section id="popular-houseplants" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Popular Houseplants</h2>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/popular/snake.jpg" class="card-img-top" alt="Snake Plant">
+                        <div class="card-body">
+                            <h5 class="card-title">Snake Plant</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/popular/succulent.jpg" class="card-img-top" alt="Succulent">
+                        <div class="card-body">
+                            <h5 class="card-title">Succulent</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/popular/ph1.jpg" class="card-img-top" alt="Anthurium">
+                        <div class="card-body">
+                            <h5 class="card-title">Anthurium</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/popular/zz.webp" class="card-img-top" alt="ZZ Plant">
+                        <div class="card-body">
+                            <h5 class="card-title">ZZ Plant</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Collections -->
+    <section id="curated-collections" class="container my-5">
+        <h2 class="text-center mb-4">Curated Plant Collections</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="assets/curated/ph3.webp" class="card-img-top" alt="Indoor Plants">
+                    <div class="card-body">
+                        <h5 class="card-title">Indoor Plants</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="assets/curated/pet1.webp" class="card-img-top" alt="Pet Friendly Plants">
+                    <div class="card-body">
+                        <h5 class="card-title">Pet Friendly Plants</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plant Care Guides -->
+    <section id="care-guides" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Plant Care Guides</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Watering</h4>
+                    <p>Learn how to water your plants properly to keep them healthy.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Sunlight</h4>
+                    <p>Understand the importance of sunlight for your plants' growth.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Soil and Fertilizer</h4>
+                    <p>Explore soil types and fertilizers to give your plants the nutrients they need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Blooming Oasis -->
+    <section id="about" class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <h2>About Blooming Oasis</h2>
+            <p>Your one-stop destination for discovering the best plants for your home and lifestyle. We aim to help you
+                find your perfect plant match with personalized recommendations.</p>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; <span id="year"></span> Blooming Oasis</p>
+    </footer>
+
+    <script src="/scripts/quiz.js"></script>
+    <script src="/scripts/common.js"></script>
+
+    <script src="/scripts/bootstrap.min.js"></script>
+</body>
+
+</html>
