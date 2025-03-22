@@ -1,48 +1,65 @@
+* {
+	box-sizing: border-box;
+	scrollbar-width: thin;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+	font-family: 'Arial', sans-serif;
 }
 
 header {
-    background-color: #007bff;
-    color: white;
+	background-color: #007bff;
+	color: white;
 }
 
 #quiz {
-    background-color: #f9f9f9;
+	background-color: #f9f9f9;
 }
 
 #collage .card-img-top {
-    object-fit: cover;
-    height: 200px;
-    aspect-ratio: 1.8;
+	object-fit: cover;
+	height: 200px;
+	aspect-ratio: 1.8;
 }
 
 /* #popular-houseplants {
     height: 240px;
 } */
 
-#popular-houseplants .card-img-top, #curated-collections .card-img-top {
-    object-fit: cover;
-    /* height: 200px; */
-    aspect-ratio: 1.8;
+#popular-houseplants .card-img-top,
+#curated-collections .card-img-top {
+	object-fit: cover;
+	/* height: 200px; */
+	aspect-ratio: 1.8;
+}
+
+#meet-the-team .card-img-top {
+	object-fit: cover;
+	/* height: 200px; */
+	aspect-ratio: 0.8 !important;
 }
 
 footer {
-    background-color: #343a40;
+	background-color: #343a40;
 }
 
-#popular-houseplants .card-title, #curated-collections .card-title {
-    text-align: center;
+#popular-houseplants .card-title,
+#curated-collections .card-title {
+	text-align: center;
 }
 
 #care-guides h4 {
-    text-align: center;
+	text-align: center;
 }
 
 #about {
-    background-color: #007bff;
+	background-color: #007bff;
 }
 
 footer p {
-    margin: 0;
+	margin: 0;
 }

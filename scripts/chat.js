@@ -1,3 +1,5 @@
+// @ts-expect-error
+
 /** @type {HTMLButtonElement} */
 const chatButton = document.getElementById("chat-button");
 /** @type {HTMLElement} */
@@ -13,13 +15,22 @@ chatButton.addEventListener("click", function () {
     chatBox.style.display = chatBox.style.display === "flex" ? "none" : "flex";
 });
 
-sendButton.addEventListener("click", function () {
+function sendMessage() {
     const message = chatInput.value;
+
+    if (!message.trim()) {
+        /** @type {HTMLDialogElement} */
+        const errorToast = new bootstrap.Toast(document.getElementById('error-toast'));
+        return errorToast.show()
+    }
 
     if (message.trim()) {
         // Add user's message to chat
         const userMessage = document.createElement("div");
         userMessage.textContent = `You: ${message}`;
+        userMessage.style.fontStyle = "italic";
+        userMessage.style.color = "green";
+        userMessage.style.textAlign = "right"
         chatMessages.appendChild(userMessage);
 
         // Simulate plant specialist response
@@ -32,5 +43,14 @@ sendButton.addEventListener("click", function () {
 
         // Clear input field
         chatInput.value = "";
+        chatInput.focus({ preventScroll: true })
     }
-});
+}
+
+sendButton.addEventListener("click", sendMessage);
+
+chatInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+})

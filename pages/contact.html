@@ -89,13 +89,22 @@
 
         <!-- Toast Notification -->
         <div id="toast-container" class="toast-container position-fixed top-0 end-0 p-3">
-            <div id="success-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div id="success-toast" class="toast bg-success" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
                     <strong class="me-auto">Blooming Oasis</strong>
                     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
-                <div class="toast-body">
+                <div class="toast-body text-white">
                     Your message has been sent successfully!
+                </div>
+            </div>
+            <div id="error-toast" class="toast bg-danger" role="alert" aria-live="polite" aria-atomic="false">
+                <div class="toast-header">
+                    <strong class="me-auto">Blooming Oasis</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body text-white">
+                    Please write a message!
                 </div>
             </div>
         </div>
@@ -128,6 +137,7 @@
     <script>
         /** @type {HTMLFormElement} */
         const form = document.getElementById('inquiry-form');
+        /** @type {HTMLDialogElement} */
         const successToast = new bootstrap.Toast(document.getElementById('success-toast'));
 
         form.addEventListener('submit', function (event) {

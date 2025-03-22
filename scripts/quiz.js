@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * @typedef {"full-sun" | "partial-sun" | "shade"} Sunlight
  * @typedef {"easy" | "moderate" | "hard"} CareLevel
@@ -103,12 +105,13 @@ const plants = [
 ];
 
 function getPlantRecommendation() {
-    /** @type {Sunlight} */
-    const sunlight = document.getElementById("sunlight").value;
-    /** @type {CareLevel} */
-    const careLevel = document.getElementById("care-level").value;
-    /** @type {PetFriendly} */
-    const petFriendly = document.getElementById("pet-friendly").value;
+    /** @type {Sunlight | string} */
+    const sunlight = /** @type {HTMLSelectElement} */ (document.getElementById("sunlight")).value;
+    /** @type {CareLevel | string} */
+    const careLevel = /** @type {HTMLSelectElement} */ (document.getElementById("care-level")).value;
+    /** @type {PetFriendly | string} */
+    const petFriendly = /** @type {HTMLSelectElement} */ (document.getElementById("pet-friendly")).value;
+
 
     const recommendedPlant = plants.find(plant =>
         plant.sunlight === sunlight &&
@@ -124,5 +127,7 @@ function getPlantRecommendation() {
         recommendation = "No exact match found. Try exploring our plant collections!";
     }
 
-    document.getElementById("recommendation").innerHTML = `<h4>${recommendation}</h4>`;
+    const recommendationElement = document.getElementById("recommendation");
+
+    recommendationElement && (recommendationElement.innerHTML = `<h4>${recommendation}</h4>`);
 }

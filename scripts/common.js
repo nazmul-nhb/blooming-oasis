@@ -1,1 +1,5 @@
-document.getElementById("year").innerText = String(new Date().getFullYear());
+// @ts-check
+
+const dateSpan = document.getElementById("year")
+
+dateSpan && (dateSpan.innerText = String(new Date().getFullYear()));
